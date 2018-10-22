@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>This product was created by:</strong>
+  <%= @product.user.email %>
+</p>
+
+
+<p>
   <strong>Title:</strong>
   <%= @product.title %>
 </p>

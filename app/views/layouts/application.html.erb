@@ -10,18 +10,7 @@
   </head>
 
   <body>
-    <nav>
-      <% if user_signed_in? %>
-        <p>
-          Welcome, <%= current_user.email %>
-          (<%= link_to('Logout', destroy_user_session_path, method: :delete) %>)
-        </p>
-      <% end %>
-
-      <%= link_to "Home", root_path %>
-      <%= link_to "View All Products", products_path %>
-
-    </nav>
+    <%= render 'shared/navbar' %>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,8 @@
+<h2>
+  Thanks, you paid
+  <strong>
+    <%= number_to_currency(@product.price/100.0) %>
+  </strong>!
+</h2>
+
+<p>You purchased a: <%= @product.title %></p>

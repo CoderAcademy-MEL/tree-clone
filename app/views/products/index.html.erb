@@ -19,7 +19,7 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= product.description %></td>
-        <td><%= product.price %></td>
+        <td><%= number_to_currency(product.price/100.0) %></td>
         <td><%= product.user.email %></td>
         <td><%= link_to 'Show', product %></td>
         <% if current_user == product.user %>

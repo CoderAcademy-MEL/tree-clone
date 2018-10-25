@@ -18,6 +18,8 @@ class ChargesController < ApplicationController
       :currency    => 'aud'
     )
 
+    ProductMailer.with(user: current_user).new_purchase.deliver_now
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to @product
